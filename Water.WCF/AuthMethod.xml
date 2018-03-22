@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AuthMethods>
+  <Type name="UsersBusiness">
+    <Fuc name="GetUserPoints"/>
+    <Fuc name="GetUserPaypointsAndBonusCount"/>
+    <Fuc name="GetUserCollect"/>
+    <Fuc name="DeleteUserCollect"/>
+    <Fuc name="GetUserBonusByUserID"/>
+    <Fuc name="ActivateBonus"/>
+    <Fuc name="SaveUserCollect"/>
+  </Type>
+  <Type name="GoodsBusiness">
+    <Fuc name="GetCartItemsByUserId"/>
+    <Fuc name="DeleteCartItems"/>
+    <Fuc name="AddCartItem"/>
+    <Fuc name="MergeCartItem"/>
+  </Type>
+  <Type name="UserAddressBusiness">
+    <Fuc name="GetUserAddress"/>
+    <Fuc name="GetUserAddressDetail"/>
+    <Fuc name="SaveUserAddress"/>
+    <Fuc name="DeleteUserAddress"/>
+  </Type>
+  <Type name="OrderInfoBusiness">
+    <Fuc name="GetOrderAlipayInfo"/>
+    <Fuc name="SaveOrder"/>
+    <Fuc name="OrderPayment"/>
+    <Fuc name="GetOrders"/>
+    <Fuc name="CancelOrder"/>
+    <Fuc name="DeleteOrder"/>
+  </Type>
+</AuthMethods>
