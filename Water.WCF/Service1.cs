@@ -69,7 +69,8 @@ namespace Water.WCF
         /// <returns></returns>
         string Invoke(string typeName, string fucName, Newtonsoft.Json.Linq.JObject jObject)
         {
-            var type = Type.GetType(string.Format("Water.Business.{0},Water.Business", typeName));
+            var type = Type.GetType(string.Format("Water.Bussiness.{0},Water.Bussiness", typeName));
+
             var fuc = type.GetMethod(fucName);
             object[] paras = null;
             var fucParas = fuc.GetParameters();
@@ -84,12 +85,10 @@ namespace Water.WCF
                 }
             }
             string result = string.Empty;
-            using (var instance = (IDisposable)BusinessFactory.WaterBusiness(type))
-            {
-                if (fuc.ReturnType != typeof(void))
-                    result = Newtonsoft.Json.JsonConvert.SerializeObject(fuc.Invoke(instance, paras));
-                else result = Newtonsoft.Json.JsonConvert.SerializeObject(new StatusResult() { Status = Status.Success });
-            }
+            var instance = Activator.CreateInstance(type);
+            if (fuc.ReturnType != typeof(void))
+                result = Newtonsoft.Json.JsonConvert.SerializeObject(fuc.Invoke(instance, paras));
+            else result = Newtonsoft.Json.JsonConvert.SerializeObject(new StatusResult() { Status = Status.Success });
             return result;
         }
 
