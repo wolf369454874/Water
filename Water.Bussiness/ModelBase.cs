@@ -5,7 +5,7 @@ using System.Text;
 using System.Reflection;
 using System.Collections;
 
-namespace Water.Business
+namespace Water.Bussiness
 {
     /// <summary>
     /// 模型基类

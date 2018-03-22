@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Data;
 using System.Reflection;
-namespace NCL.Data
+namespace Water.Util
 {
     /// <summary>    
     /// 实体转换辅助类    

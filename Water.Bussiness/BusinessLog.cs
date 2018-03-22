@@ -1,11 +1,11 @@
-﻿using Water.Business.Aop;
+﻿using Water.Bussiness.Aop;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Water.Business
+namespace Water.Bussiness
 {
     /// <summary>
     /// 日志记录

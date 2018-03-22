@@ -1,22 +1,22 @@
-﻿using Water.Business.Aop;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Water.Bussiness.Aop;
 
-namespace Water.Business
+namespace Water.Bussiness
 {
     /// <summary>
     /// 业务工厂1
     /// </summary>
-    public class BusinessFactory : AopProxyBase
+    public class BussinessFactory : AopProxyBase
     {
         /// <summary>
         /// 创建一个业务工厂实例
         /// </summary>
         /// <param name="obj">业务实体</param>
-        public BusinessFactory(MarshalByRefObject obj)
+        public BussinessFactory(MarshalByRefObject obj)
             : base(obj)
         {
         }
@@ -82,11 +82,11 @@ namespace Water.Business
         /// </summary>
         /// <typeparam name="T">被代理业务对象类型</typeparam>
         /// <returns></returns>
-        public static T WaterBusiness<T>()
+        public static T WaterBussiness<T>()
             where T : MarshalByRefObject
         {
             var obj = Activator.CreateInstance<T>();
-            BusinessFactory proxy = new BusinessFactory(obj);
+            BussinessFactory proxy = new BussinessFactory(obj);
             return proxy.GetTransparentProxy() as T;
         }
         /// <summary>
@@ -94,11 +94,17 @@ namespace Water.Business
         /// </summary>
         /// <param name="businessType">被代理业务对象类型</param>
         /// <returns></returns>
-        public static object WaterBusiness(Type businessType)
+        public static object WaterBussiness(Type bussinessType)
         {
-            var obj = Activator.CreateInstance(businessType) as MarshalByRefObject;
-            BusinessFactory proxy = new BusinessFactory(obj);
-            return proxy.GetTransparentProxy();
+            try {
+                var tt = Activator.CreateInstance(bussinessType);
+                var obj = Activator.CreateInstance(bussinessType) as MarshalByRefObject;
+                BussinessFactory proxy = new BussinessFactory(obj);
+                return proxy.GetTransparentProxy();
+            } catch (Exception ex) {
+                return ex.ToString();
+            }
+
         }
     }
 }

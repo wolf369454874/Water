@@ -9,7 +9,7 @@ using System.Runtime.Remoting.Messaging;
 using System.Runtime.Remoting.Services;
 using System.Runtime.Remoting.Activation;
 
-namespace Water.Business.Aop
+namespace Water.Bussiness.Aop
 {
     /// <summary>
     /// AopProxyBase 

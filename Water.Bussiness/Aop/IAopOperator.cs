@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.Remoting.Messaging;
 
-namespace Water.Business.Aop
+namespace Water.Bussiness.Aop
 {
     /// <summary>
     /// aop操作方法

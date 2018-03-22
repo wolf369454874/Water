@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2005
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Water.Business", "Water.Bussiness\Water.Business.csproj", "{91CAE136-11FF-4792-92C9-72EDCE88148F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Water.Bussiness", "Water.Bussiness\Water.Bussiness.csproj", "{91CAE136-11FF-4792-92C9-72EDCE88148F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Water.Util", "Water.Util\Water.Util.csproj", "{F7B31DAA-60D3-49CC-8CB2-BE92DD879BDB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Water.Dal", "Water.Dal\Water.Dal.csproj", "{F47C9F7B-A8EC-454C-BCEE-4D1203487C63}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Water.WCF", "Water.WCF\Water.WCF.csproj", "{3BCB0642-07CE-4865-9474-0C5245CBA256}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestForm", "TestForm\TestForm.csproj", "{D710BE18-4870-45A6-BACB-015D71DFED03}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{3BCB0642-07CE-4865-9474-0C5245CBA256}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3BCB0642-07CE-4865-9474-0C5245CBA256}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3BCB0642-07CE-4865-9474-0C5245CBA256}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D710BE18-4870-45A6-BACB-015D71DFED03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D710BE18-4870-45A6-BACB-015D71DFED03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D710BE18-4870-45A6-BACB-015D71DFED03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D710BE18-4870-45A6-BACB-015D71DFED03}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

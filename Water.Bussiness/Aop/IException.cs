@@ -5,7 +5,7 @@ using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Water.Business.Aop
+namespace Water.Bussiness.Aop
 {
     /// <summary>
     /// 处理异常接口

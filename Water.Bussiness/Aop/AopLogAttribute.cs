@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Water.Business.Aop
+namespace Water.Bussiness.Aop
 {
     /// <summary>
     /// AOP日志记录特性
